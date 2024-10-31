@@ -34,6 +34,25 @@ const config = {
     locales: ['en'],
   },
 
+  themes: ['docusaurus-theme-redoc'],
+  plugins: [
+    [
+      'docusaurus-plugin-redoc',
+      {
+        specs: [
+          {
+            spec: 'static/openapi.json', // Path to your OpenAPI spec
+            route: '/api/',              // URL route to access the docs
+          },
+        ],
+        // Optional theme object to customize ReDoc appearance
+        theme: {
+          // Redoc theme options
+        },
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
