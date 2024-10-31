@@ -1,11 +1,12 @@
 export default {
   "01a85c17": [() => import(/* webpackChunkName: "01a85c17" */ "@theme/BlogTagsListPage"), "@theme/BlogTagsListPage", require.resolveWeak("@theme/BlogTagsListPage")],
+  "0e384e19": [() => import(/* webpackChunkName: "0e384e19" */ "@site/docs/intro.md"), "@site/docs/intro.md", require.resolveWeak("@site/docs/intro.md")],
   "17896441": [() => import(/* webpackChunkName: "17896441" */ "@theme/DocItem"), "@theme/DocItem", require.resolveWeak("@theme/DocItem")],
-  "1db64337": [() => import(/* webpackChunkName: "1db64337" */ "@site/docs/overview.md"), "@site/docs/overview.md", require.resolveWeak("@site/docs/overview.md")],
   "1dd17c60": [() => import(/* webpackChunkName: "1dd17c60" */ "@generated/docusaurus-plugin-content-blog/default/p/open-atlas-docs-blog-tags-facebook-8aa.json"), "@generated/docusaurus-plugin-content-blog/default/p/open-atlas-docs-blog-tags-facebook-8aa.json", require.resolveWeak("@generated/docusaurus-plugin-content-blog/default/p/open-atlas-docs-blog-tags-facebook-8aa.json")],
   "1f391b9e": [() => import(/* webpackChunkName: "1f391b9e" */ "@theme/MDXPage"), "@theme/MDXPage", require.resolveWeak("@theme/MDXPage")],
   "2eb0843a": [() => import(/* webpackChunkName: "2eb0843a" */ "@generated/docusaurus-plugin-content-blog/default/p/open-atlas-docs-blog-tags-docusaurus-df9.json"), "@generated/docusaurus-plugin-content-blog/default/p/open-atlas-docs-blog-tags-docusaurus-df9.json", require.resolveWeak("@generated/docusaurus-plugin-content-blog/default/p/open-atlas-docs-blog-tags-docusaurus-df9.json")],
   "33fc5bb8": [() => import(/* webpackChunkName: "33fc5bb8" */ "@theme/Blog/Pages/BlogAuthorsPostsPage"), "@theme/Blog/Pages/BlogAuthorsPostsPage", require.resolveWeak("@theme/Blog/Pages/BlogAuthorsPostsPage")],
+  "34875c9f": [() => import(/* webpackChunkName: "34875c9f" */ "@site/docs/tutorialintro.md"), "@site/docs/tutorialintro.md", require.resolveWeak("@site/docs/tutorialintro.md")],
   "36994c47": [() => import(/* webpackChunkName: "36994c47" */ "@generated/docusaurus-plugin-content-blog/default/__plugin.json"), "@generated/docusaurus-plugin-content-blog/default/__plugin.json", require.resolveWeak("@generated/docusaurus-plugin-content-blog/default/__plugin.json")],
   "393be207": [() => import(/* webpackChunkName: "393be207" */ "@site/src/pages/markdown-page.md"), "@site/src/pages/markdown-page.md", require.resolveWeak("@site/src/pages/markdown-page.md")],
   "4a1aad58": [() => import(/* webpackChunkName: "4a1aad58" */ "@site/docs/risk-assessment-tutorial.md"), "@site/docs/risk-assessment-tutorial.md", require.resolveWeak("@site/docs/risk-assessment-tutorial.md")],

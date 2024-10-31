@@ -2,46 +2,39 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+# Overview
 
-## Getting Started
+Open Atlas Vantage is the EUDR analysis tool, designed to assess the compliance status of source-commodity production locations with respect to the European Union Deforestation Regulation (EUDR).
 
-Get started by **creating a new site**.
+# **Interface**
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Vantage provides the API to cover the entire flow of deforestation and location-specific legislation risk assessment. The API allows you to:
 
-### What you'll need
+- Register the plot of land. This includes both polygon and point geolocation.
+- Run risk assessment for selected plots of land.
+- Retrieve risk assessment results in the form of calculated values and visual representation.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+The API allows running analysis globally and at scale.
 
-## Generate a new site
+![Example of the visual representation of risk assessment.](./img/visual-results.png)
 
-Generate a new Docusaurus site using the **classic template**.
+Example of the visual representation of risk assessment.
 
-The classic template will automatically be added to your project after you run the command:
+:::tip Information
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+To access Vantage API, you must provide the username and the password.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+[Please get in touch with us](https://www.open-atlas.com/contact) to learn more and access the product.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+:::
 
-## Start your site
+# **Tokens**
 
-Run the development server:
+Once you have your account set up, you have a dedicated number of tokens to perform risk assessment. At OpenAtlas, we aim to provide transparent pricing to ensure a straightforward integration. Therefore, for each registered plot, we explicitly provide the number of tokens that will take to run the risk assessment.
 
-```bash
-cd my-website
-npm run start
-```
+You can always access information about the currently available and reserved tokens.
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+# **Documentation Overview**
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+The Vantage documentation provides articles with detailed information about registering the geolocation of plots of land, risk assessment and the end-to-end tutorial on how to run EUDR risk assessment at scale using Vantage API. Additionally, there is an API reference documentation with all the details about every endpoint.

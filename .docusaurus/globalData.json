@@ -8,11 +8,11 @@
           "label": "Next",
           "isLast": true,
           "path": "/open-atlas-docs/docs",
-          "mainDocId": "overview",
+          "mainDocId": "intro",
           "docs": [
             {
-              "id": "overview",
-              "path": "/open-atlas-docs/docs/overview",
+              "id": "intro",
+              "path": "/open-atlas-docs/docs/intro",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -29,14 +29,19 @@
               "id": "risk-assessment-tutorial",
               "path": "/open-atlas-docs/docs/risk-assessment-tutorial",
               "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorialintro",
+              "path": "/open-atlas-docs/docs/tutorialintro",
+              "sidebar": "tutorialSidebar"
             }
           ],
           "draftIds": [],
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/open-atlas-docs/docs/overview",
-                "label": "overview"
+                "path": "/open-atlas-docs/docs/intro",
+                "label": "intro"
               }
             }
           }

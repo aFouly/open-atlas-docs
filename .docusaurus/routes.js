@@ -79,19 +79,19 @@ export default [
   },
   {
     path: '/open-atlas-docs/docs',
-    component: ComponentCreator('/open-atlas-docs/docs', '390'),
+    component: ComponentCreator('/open-atlas-docs/docs', '57e'),
     routes: [
       {
         path: '/open-atlas-docs/docs',
-        component: ComponentCreator('/open-atlas-docs/docs', '2cc'),
+        component: ComponentCreator('/open-atlas-docs/docs', 'ca0'),
         routes: [
           {
             path: '/open-atlas-docs/docs',
-            component: ComponentCreator('/open-atlas-docs/docs', '817'),
+            component: ComponentCreator('/open-atlas-docs/docs', '7b2'),
             routes: [
               {
-                path: '/open-atlas-docs/docs/overview',
-                component: ComponentCreator('/open-atlas-docs/docs/overview', '438'),
+                path: '/open-atlas-docs/docs/intro',
+                component: ComponentCreator('/open-atlas-docs/docs/intro', 'd97'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -110,6 +110,12 @@ export default [
               {
                 path: '/open-atlas-docs/docs/risk-assessment-tutorial',
                 component: ComponentCreator('/open-atlas-docs/docs/risk-assessment-tutorial', '4ac'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/open-atlas-docs/docs/tutorialintro',
+                component: ComponentCreator('/open-atlas-docs/docs/tutorialintro', '88c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }

@@ -1,7 +1,7 @@
 {
   "id": "intro",
-  "title": "Tutorial Intro",
-  "description": "Let's discover Docusaurus in less than 5 minutes.",
+  "title": "Overview",
+  "description": "Open Atlas Vantage is the EUDR analysis tool, designed to assess the compliance status of source-commodity production locations with respect to the European Union Deforestation Regulation (EUDR).",
   "source": "@site/docs/intro.md",
   "sourceDirName": ".",
   "slug": "/intro",
@@ -17,7 +17,7 @@
   },
   "sidebar": "tutorialSidebar",
   "next": {
-    "title": "Overview",
-    "permalink": "/open-atlas-docs/docs/overview"
+    "title": "Tutorial Intro",
+    "permalink": "/open-atlas-docs/docs/tutorialintro"
   }
 }
