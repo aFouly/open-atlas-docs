@@ -3,155 +3,155 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/blog',
-    component: ComponentCreator('/blog', 'b2f'),
+    path: '/open-atlas-docs/blog',
+    component: ComponentCreator('/open-atlas-docs/blog', '3c9'),
     exact: true
   },
   {
-    path: '/blog/archive',
-    component: ComponentCreator('/blog/archive', '182'),
+    path: '/open-atlas-docs/blog/archive',
+    component: ComponentCreator('/open-atlas-docs/blog/archive', '436'),
     exact: true
   },
   {
-    path: '/blog/authors',
-    component: ComponentCreator('/blog/authors', '0b7'),
+    path: '/open-atlas-docs/blog/authors',
+    component: ComponentCreator('/open-atlas-docs/blog/authors', '455'),
     exact: true
   },
   {
-    path: '/blog/authors/all-sebastien-lorber-articles',
-    component: ComponentCreator('/blog/authors/all-sebastien-lorber-articles', '4a1'),
+    path: '/open-atlas-docs/blog/authors/all-sebastien-lorber-articles',
+    component: ComponentCreator('/open-atlas-docs/blog/authors/all-sebastien-lorber-articles', '595'),
     exact: true
   },
   {
-    path: '/blog/authors/yangshun',
-    component: ComponentCreator('/blog/authors/yangshun', 'a68'),
+    path: '/open-atlas-docs/blog/authors/yangshun',
+    component: ComponentCreator('/open-atlas-docs/blog/authors/yangshun', '56b'),
     exact: true
   },
   {
-    path: '/blog/first-blog-post',
-    component: ComponentCreator('/blog/first-blog-post', '89a'),
+    path: '/open-atlas-docs/blog/first-blog-post',
+    component: ComponentCreator('/open-atlas-docs/blog/first-blog-post', '5fb'),
     exact: true
   },
   {
-    path: '/blog/long-blog-post',
-    component: ComponentCreator('/blog/long-blog-post', '9ad'),
+    path: '/open-atlas-docs/blog/long-blog-post',
+    component: ComponentCreator('/open-atlas-docs/blog/long-blog-post', 'ed7'),
     exact: true
   },
   {
-    path: '/blog/mdx-blog-post',
-    component: ComponentCreator('/blog/mdx-blog-post', 'e9f'),
+    path: '/open-atlas-docs/blog/mdx-blog-post',
+    component: ComponentCreator('/open-atlas-docs/blog/mdx-blog-post', '136'),
     exact: true
   },
   {
-    path: '/blog/tags',
-    component: ComponentCreator('/blog/tags', '287'),
+    path: '/open-atlas-docs/blog/tags',
+    component: ComponentCreator('/open-atlas-docs/blog/tags', '6da'),
     exact: true
   },
   {
-    path: '/blog/tags/docusaurus',
-    component: ComponentCreator('/blog/tags/docusaurus', '704'),
+    path: '/open-atlas-docs/blog/tags/docusaurus',
+    component: ComponentCreator('/open-atlas-docs/blog/tags/docusaurus', 'd17'),
     exact: true
   },
   {
-    path: '/blog/tags/facebook',
-    component: ComponentCreator('/blog/tags/facebook', '858'),
+    path: '/open-atlas-docs/blog/tags/facebook',
+    component: ComponentCreator('/open-atlas-docs/blog/tags/facebook', '482'),
     exact: true
   },
   {
-    path: '/blog/tags/hello',
-    component: ComponentCreator('/blog/tags/hello', '299'),
+    path: '/open-atlas-docs/blog/tags/hello',
+    component: ComponentCreator('/open-atlas-docs/blog/tags/hello', '7d8'),
     exact: true
   },
   {
-    path: '/blog/tags/hola',
-    component: ComponentCreator('/blog/tags/hola', '00d'),
+    path: '/open-atlas-docs/blog/tags/hola',
+    component: ComponentCreator('/open-atlas-docs/blog/tags/hola', '298'),
     exact: true
   },
   {
-    path: '/blog/welcome',
-    component: ComponentCreator('/blog/welcome', 'd2b'),
+    path: '/open-atlas-docs/blog/welcome',
+    component: ComponentCreator('/open-atlas-docs/blog/welcome', '99d'),
     exact: true
   },
   {
-    path: '/markdown-page',
-    component: ComponentCreator('/markdown-page', '3d7'),
+    path: '/open-atlas-docs/markdown-page',
+    component: ComponentCreator('/open-atlas-docs/markdown-page', '9cc'),
     exact: true
   },
   {
-    path: '/docs',
-    component: ComponentCreator('/docs', '733'),
+    path: '/open-atlas-docs/docs',
+    component: ComponentCreator('/open-atlas-docs/docs', '8b3'),
     routes: [
       {
-        path: '/docs',
-        component: ComponentCreator('/docs', '7e6'),
+        path: '/open-atlas-docs/docs',
+        component: ComponentCreator('/open-atlas-docs/docs', '2ed'),
         routes: [
           {
-            path: '/docs',
-            component: ComponentCreator('/docs', 'ba6'),
+            path: '/open-atlas-docs/docs',
+            component: ComponentCreator('/open-atlas-docs/docs', '3cb'),
             routes: [
               {
-                path: '/docs/category/tutorial---basics',
-                component: ComponentCreator('/docs/category/tutorial---basics', '20e'),
+                path: '/open-atlas-docs/docs/category/tutorial---basics',
+                component: ComponentCreator('/open-atlas-docs/docs/category/tutorial---basics', '98a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/category/tutorial---extras',
-                component: ComponentCreator('/docs/category/tutorial---extras', '9ad'),
+                path: '/open-atlas-docs/docs/category/tutorial---extras',
+                component: ComponentCreator('/open-atlas-docs/docs/category/tutorial---extras', 'ef1'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/intro',
-                component: ComponentCreator('/docs/intro', '61d'),
+                path: '/open-atlas-docs/docs/intro',
+                component: ComponentCreator('/open-atlas-docs/docs/intro', 'd97'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/tutorial-basics/congratulations',
-                component: ComponentCreator('/docs/tutorial-basics/congratulations', '458'),
+                path: '/open-atlas-docs/docs/tutorial-basics/congratulations',
+                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/congratulations', 'd24'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/tutorial-basics/create-a-blog-post',
-                component: ComponentCreator('/docs/tutorial-basics/create-a-blog-post', '108'),
+                path: '/open-atlas-docs/docs/tutorial-basics/create-a-blog-post',
+                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/create-a-blog-post', '1c1'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/tutorial-basics/create-a-document',
-                component: ComponentCreator('/docs/tutorial-basics/create-a-document', '8fc'),
+                path: '/open-atlas-docs/docs/tutorial-basics/create-a-document',
+                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/create-a-document', 'cee'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/tutorial-basics/create-a-page',
-                component: ComponentCreator('/docs/tutorial-basics/create-a-page', '951'),
+                path: '/open-atlas-docs/docs/tutorial-basics/create-a-page',
+                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/create-a-page', '712'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/tutorial-basics/deploy-your-site',
-                component: ComponentCreator('/docs/tutorial-basics/deploy-your-site', '4f5'),
+                path: '/open-atlas-docs/docs/tutorial-basics/deploy-your-site',
+                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/deploy-your-site', '848'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/tutorial-basics/markdown-features',
-                component: ComponentCreator('/docs/tutorial-basics/markdown-features', 'b05'),
+                path: '/open-atlas-docs/docs/tutorial-basics/markdown-features',
+                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/markdown-features', '45e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/tutorial-extras/manage-docs-versions',
-                component: ComponentCreator('/docs/tutorial-extras/manage-docs-versions', '978'),
+                path: '/open-atlas-docs/docs/tutorial-extras/manage-docs-versions',
+                component: ComponentCreator('/open-atlas-docs/docs/tutorial-extras/manage-docs-versions', '50c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/tutorial-extras/translate-your-site',
-                component: ComponentCreator('/docs/tutorial-extras/translate-your-site', 'f9a'),
+                path: '/open-atlas-docs/docs/tutorial-extras/translate-your-site',
+                component: ComponentCreator('/open-atlas-docs/docs/tutorial-extras/translate-your-site', '789'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
@@ -162,8 +162,8 @@ export default [
     ]
   },
   {
-    path: '/',
-    component: ComponentCreator('/', '2e1'),
+    path: '/open-atlas-docs/',
+    component: ComponentCreator('/open-atlas-docs/', '447'),
     exact: true
   },
   {
