@@ -107,6 +107,11 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
+            to: '/api/', // **Add this line to link to your API docs**
+            label: 'API Reference',
+            position: 'left',
+          },
+          {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
