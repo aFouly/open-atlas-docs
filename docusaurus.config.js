@@ -16,12 +16,12 @@ const config = {
   url: 'https://aFouly.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/open-atlas-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'aFouly', // Usually your GitHub org/user name.
-  projectName: 'open-atlas-docs.github.io', // Usually your repo name.
+  projectName: 'open-atlas-docs', // Usually your repo name.
   deploymentBranch: 'main',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
