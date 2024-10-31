@@ -1,0 +1,23 @@
+{
+  "id": "risk-assessment-tutorial",
+  "title": "Risk Assessment Tutorial",
+  "description": "Read this tutorial if you are looking for a step-by-step guide on how to create a plot, run an EUDR risk assessment analysis and retrieve information about its results.",
+  "source": "@site/docs/risk-assessment-tutorial.md",
+  "sourceDirName": ".",
+  "slug": "/risk-assessment-tutorial",
+  "permalink": "/open-atlas-docs/docs/risk-assessment-tutorial",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/risk-assessment-tutorial.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Risk Assessment",
+    "permalink": "/open-atlas-docs/docs/risk-assessment"
+  }
+}

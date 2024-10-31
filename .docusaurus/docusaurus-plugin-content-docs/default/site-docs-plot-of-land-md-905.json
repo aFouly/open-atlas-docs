@@ -1,0 +1,27 @@
+{
+  "id": "plot-of-land",
+  "title": "Plot of Land",
+  "description": "The plot of land is a key entity in the EUDR Risk Assessment and Mitigation. Each product must ensure that the plot of land where it was produced was not the result of deforestation or forest degradation as well as the geolocation is in accordance with the region-specific legislation (specifically, not in the area of Indigenous people or protected areas).",
+  "source": "@site/docs/plot-of-land.md",
+  "sourceDirName": ".",
+  "slug": "/plot-of-land",
+  "permalink": "/open-atlas-docs/docs/plot-of-land",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/plot-of-land.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/open-atlas-docs/docs/overview"
+  },
+  "next": {
+    "title": "Risk Assessment",
+    "permalink": "/open-atlas-docs/docs/risk-assessment"
+  }
+}

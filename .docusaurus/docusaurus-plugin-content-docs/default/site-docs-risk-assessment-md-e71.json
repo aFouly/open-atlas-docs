@@ -1,0 +1,27 @@
+{
+  "id": "risk-assessment",
+  "title": "Risk Assessment",
+  "description": "The risk assessment is the key step in the EUDR compliance process. The risk assessment includes a set of criteria defined in Article 10 of the regulation. Open Atlas Vantage product performs an assessment for the following criteria:",
+  "source": "@site/docs/risk-assessment.md",
+  "sourceDirName": ".",
+  "slug": "/risk-assessment",
+  "permalink": "/open-atlas-docs/docs/risk-assessment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/risk-assessment.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Plot of Land",
+    "permalink": "/open-atlas-docs/docs/plot-of-land"
+  },
+  "next": {
+    "title": "Risk Assessment Tutorial",
+    "permalink": "/open-atlas-docs/docs/risk-assessment-tutorial"
+  }
+}

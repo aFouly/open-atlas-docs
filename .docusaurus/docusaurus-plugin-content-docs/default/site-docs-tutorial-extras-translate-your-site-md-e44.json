@@ -19,5 +19,9 @@
   "previous": {
     "title": "Manage Docs Versions",
     "permalink": "/open-atlas-docs/docs/tutorial-extras/manage-docs-versions"
+  },
+  "next": {
+    "title": "Risk Assessment Tutorial",
+    "permalink": "/open-atlas-docs/docs/risk-assessment-tutorial"
   }
 }

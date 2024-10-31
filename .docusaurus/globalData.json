@@ -8,61 +8,26 @@
           "label": "Next",
           "isLast": true,
           "path": "/open-atlas-docs/docs",
-          "mainDocId": "intro",
+          "mainDocId": "overview",
           "docs": [
             {
-              "id": "intro",
-              "path": "/open-atlas-docs/docs/intro",
+              "id": "overview",
+              "path": "/open-atlas-docs/docs/overview",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "tutorial-basics/congratulations",
-              "path": "/open-atlas-docs/docs/tutorial-basics/congratulations",
+              "id": "plot-of-land",
+              "path": "/open-atlas-docs/docs/plot-of-land",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "tutorial-basics/create-a-blog-post",
-              "path": "/open-atlas-docs/docs/tutorial-basics/create-a-blog-post",
+              "id": "risk-assessment",
+              "path": "/open-atlas-docs/docs/risk-assessment",
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "tutorial-basics/create-a-document",
-              "path": "/open-atlas-docs/docs/tutorial-basics/create-a-document",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-basics/create-a-page",
-              "path": "/open-atlas-docs/docs/tutorial-basics/create-a-page",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-basics/deploy-your-site",
-              "path": "/open-atlas-docs/docs/tutorial-basics/deploy-your-site",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-basics/markdown-features",
-              "path": "/open-atlas-docs/docs/tutorial-basics/markdown-features",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-extras/manage-docs-versions",
-              "path": "/open-atlas-docs/docs/tutorial-extras/manage-docs-versions",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorial-extras/translate-your-site",
-              "path": "/open-atlas-docs/docs/tutorial-extras/translate-your-site",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "/category/tutorial---basics",
-              "path": "/open-atlas-docs/docs/category/tutorial---basics",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "/category/tutorial---extras",
-              "path": "/open-atlas-docs/docs/category/tutorial---extras",
+              "id": "risk-assessment-tutorial",
+              "path": "/open-atlas-docs/docs/risk-assessment-tutorial",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -70,8 +35,8 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/open-atlas-docs/docs/intro",
-                "label": "intro"
+                "path": "/open-atlas-docs/docs/overview",
+                "label": "overview"
               }
             }
           }

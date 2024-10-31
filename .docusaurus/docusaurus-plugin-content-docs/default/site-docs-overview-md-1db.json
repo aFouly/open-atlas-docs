@@ -1,0 +1,23 @@
+{
+  "id": "overview",
+  "title": "Overview",
+  "description": "Open Atlas Vantage is the EUDR analysis tool, designed to assess the compliance status of source-commodity production locations with respect to the European Union Deforestation Regulation (EUDR).",
+  "source": "@site/docs/overview.md",
+  "sourceDirName": ".",
+  "slug": "/overview",
+  "permalink": "/open-atlas-docs/docs/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/overview.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Plot of Land",
+    "permalink": "/open-atlas-docs/docs/plot-of-land"
+  }
+}

@@ -79,79 +79,37 @@ export default [
   },
   {
     path: '/open-atlas-docs/docs',
-    component: ComponentCreator('/open-atlas-docs/docs', '8b3'),
+    component: ComponentCreator('/open-atlas-docs/docs', '390'),
     routes: [
       {
         path: '/open-atlas-docs/docs',
-        component: ComponentCreator('/open-atlas-docs/docs', '2ed'),
+        component: ComponentCreator('/open-atlas-docs/docs', '2cc'),
         routes: [
           {
             path: '/open-atlas-docs/docs',
-            component: ComponentCreator('/open-atlas-docs/docs', '3cb'),
+            component: ComponentCreator('/open-atlas-docs/docs', '817'),
             routes: [
               {
-                path: '/open-atlas-docs/docs/category/tutorial---basics',
-                component: ComponentCreator('/open-atlas-docs/docs/category/tutorial---basics', '98a'),
+                path: '/open-atlas-docs/docs/overview',
+                component: ComponentCreator('/open-atlas-docs/docs/overview', '438'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/open-atlas-docs/docs/category/tutorial---extras',
-                component: ComponentCreator('/open-atlas-docs/docs/category/tutorial---extras', 'ef1'),
+                path: '/open-atlas-docs/docs/plot-of-land',
+                component: ComponentCreator('/open-atlas-docs/docs/plot-of-land', '1b5'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/open-atlas-docs/docs/intro',
-                component: ComponentCreator('/open-atlas-docs/docs/intro', 'd97'),
+                path: '/open-atlas-docs/docs/risk-assessment',
+                component: ComponentCreator('/open-atlas-docs/docs/risk-assessment', '23b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/open-atlas-docs/docs/tutorial-basics/congratulations',
-                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/congratulations', 'd24'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/open-atlas-docs/docs/tutorial-basics/create-a-blog-post',
-                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/create-a-blog-post', '1c1'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/open-atlas-docs/docs/tutorial-basics/create-a-document',
-                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/create-a-document', 'cee'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/open-atlas-docs/docs/tutorial-basics/create-a-page',
-                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/create-a-page', '712'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/open-atlas-docs/docs/tutorial-basics/deploy-your-site',
-                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/deploy-your-site', '848'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/open-atlas-docs/docs/tutorial-basics/markdown-features',
-                component: ComponentCreator('/open-atlas-docs/docs/tutorial-basics/markdown-features', '45e'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/open-atlas-docs/docs/tutorial-extras/manage-docs-versions',
-                component: ComponentCreator('/open-atlas-docs/docs/tutorial-extras/manage-docs-versions', '50c'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/open-atlas-docs/docs/tutorial-extras/translate-your-site',
-                component: ComponentCreator('/open-atlas-docs/docs/tutorial-extras/translate-your-site', '789'),
+                path: '/open-atlas-docs/docs/risk-assessment-tutorial',
+                component: ComponentCreator('/open-atlas-docs/docs/risk-assessment-tutorial', '4ac'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }
