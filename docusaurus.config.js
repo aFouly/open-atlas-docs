@@ -22,7 +22,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'aFouly', // Usually your GitHub org/user name.
   projectName: 'open-atlas-docs.github.io', // Usually your repo name.
-
+  deploymentBranch: 'main',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
