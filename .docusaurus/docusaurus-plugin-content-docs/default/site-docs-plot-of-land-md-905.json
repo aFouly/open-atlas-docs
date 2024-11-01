@@ -8,7 +8,6 @@
   "permalink": "/open-atlas-docs/docs/plot-of-land",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/plot-of-land.md",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -17,8 +16,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Tutorial Intro",
-    "permalink": "/open-atlas-docs/docs/tutorialintro"
+    "title": "Overview",
+    "permalink": "/open-atlas-docs/docs/intro"
   },
   "next": {
     "title": "Risk Assessment",

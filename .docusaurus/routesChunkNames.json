@@ -1,204 +1,4 @@
 {
-  "/open-atlas-docs/blog-3c9": {
-    "__comp": "a6aa9e1f",
-    "__context": {
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "items": [
-      {
-        "content": "7661071f"
-      },
-      {
-        "content": "f4f34a3a"
-      },
-      {
-        "content": "8717b14a"
-      },
-      {
-        "content": "925b3f96"
-      }
-    ],
-    "__props": "981c6c12"
-  },
-  "/open-atlas-docs/blog/archive-436": {
-    "__comp": "9e4087bc",
-    "__context": {
-      "plugin": "36994c47"
-    },
-    "__props": "fee4dafd"
-  },
-  "/open-atlas-docs/blog/authors-455": {
-    "__comp": "621db11d",
-    "__context": {
-      "data": {
-        "blogMetadata": "acecf23e"
-      },
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "__props": "9f141abe"
-  },
-  "/open-atlas-docs/blog/authors/all-sebastien-lorber-articles-595": {
-    "__comp": "33fc5bb8",
-    "__context": {
-      "data": {
-        "blogMetadata": "acecf23e"
-      },
-      "plugin": "36994c47"
-    },
-    "items": [
-      {
-        "content": "7661071f"
-      },
-      {
-        "content": "f4f34a3a"
-      },
-      {
-        "content": "925b3f96"
-      }
-    ],
-    "sidebar": "814f3328",
-    "__props": "fea22ad8"
-  },
-  "/open-atlas-docs/blog/authors/yangshun-56b": {
-    "__comp": "33fc5bb8",
-    "__context": {
-      "data": {
-        "blogMetadata": "acecf23e"
-      },
-      "plugin": "36994c47"
-    },
-    "items": [
-      {
-        "content": "7661071f"
-      },
-      {
-        "content": "8717b14a"
-      },
-      {
-        "content": "925b3f96"
-      }
-    ],
-    "sidebar": "814f3328",
-    "__props": "92a1a22e"
-  },
-  "/open-atlas-docs/blog/first-blog-post-5fb": {
-    "__comp": "ccc49370",
-    "__context": {
-      "data": {
-        "blogMetadata": "acecf23e"
-      },
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "content": "e273c56f"
-  },
-  "/open-atlas-docs/blog/long-blog-post-ed7": {
-    "__comp": "ccc49370",
-    "__context": {
-      "data": {
-        "blogMetadata": "acecf23e"
-      },
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "content": "73664a40"
-  },
-  "/open-atlas-docs/blog/mdx-blog-post-136": {
-    "__comp": "ccc49370",
-    "__context": {
-      "data": {
-        "blogMetadata": "acecf23e"
-      },
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "content": "59362658"
-  },
-  "/open-atlas-docs/blog/tags-6da": {
-    "__comp": "01a85c17",
-    "__context": {
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "__props": "b9aa742a"
-  },
-  "/open-atlas-docs/blog/tags/docusaurus-d17": {
-    "__comp": "6875c492",
-    "__context": {
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "items": [
-      {
-        "content": "7661071f"
-      },
-      {
-        "content": "f4f34a3a"
-      },
-      {
-        "content": "8717b14a"
-      },
-      {
-        "content": "925b3f96"
-      }
-    ],
-    "__props": "2eb0843a"
-  },
-  "/open-atlas-docs/blog/tags/facebook-482": {
-    "__comp": "6875c492",
-    "__context": {
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "items": [
-      {
-        "content": "7661071f"
-      }
-    ],
-    "__props": "1dd17c60"
-  },
-  "/open-atlas-docs/blog/tags/hello-7d8": {
-    "__comp": "6875c492",
-    "__context": {
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "items": [
-      {
-        "content": "7661071f"
-      },
-      {
-        "content": "8717b14a"
-      }
-    ],
-    "__props": "7123eca0"
-  },
-  "/open-atlas-docs/blog/tags/hola-298": {
-    "__comp": "6875c492",
-    "__context": {
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "items": [
-      {
-        "content": "925b3f96"
-      }
-    ],
-    "__props": "73404c68"
-  },
-  "/open-atlas-docs/blog/welcome-99d": {
-    "__comp": "ccc49370",
-    "__context": {
-      "data": {
-        "blogMetadata": "acecf23e"
-      },
-      "plugin": "36994c47"
-    },
-    "sidebar": "814f3328",
-    "content": "d9f32620"
-  },
   "/open-atlas-docs/markdown-page-9cc": {
     "__comp": "1f391b9e",
     "__context": {
@@ -206,17 +6,17 @@
     },
     "content": "393be207"
   },
-  "/open-atlas-docs/docs-57e": {
+  "/open-atlas-docs/docs-e20": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/open-atlas-docs/docs-ca0": {
+  "/open-atlas-docs/docs-e56": {
     "__comp": "a7bd4aaa",
     "__props": "4fb670b5"
   },
-  "/open-atlas-docs/docs-7b2": {
+  "/open-atlas-docs/docs-555": {
     "__comp": "a94703ab"
   },
   "/open-atlas-docs/docs/intro-d97": {
@@ -234,10 +34,6 @@
   "/open-atlas-docs/docs/risk-assessment-tutorial-4ac": {
     "__comp": "17896441",
     "content": "4a1aad58"
-  },
-  "/open-atlas-docs/docs/tutorialintro-88c": {
-    "__comp": "17896441",
-    "content": "34875c9f"
   },
   "/open-atlas-docs/-447": {
     "__comp": "c4f5d8e4",

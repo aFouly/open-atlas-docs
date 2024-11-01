@@ -29,11 +29,6 @@
               "id": "risk-assessment-tutorial",
               "path": "/open-atlas-docs/docs/risk-assessment-tutorial",
               "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "tutorialintro",
-              "path": "/open-atlas-docs/docs/tutorialintro",
-              "sidebar": "tutorialSidebar"
             }
           ],
           "draftIds": [],

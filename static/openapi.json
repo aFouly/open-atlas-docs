@@ -1,0 +1,854 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Vantage API",
+        "description": "API documentation for Open Atlas Vantage service.",
+        "termsOfService": "https://open-atlas.com/terms",
+        "contact": {
+            "name": "Ahmed Elfouly",
+            "url": "https://open-atlas.com/contact",
+            "email": "info@open-atlas.com"
+        },
+        "license": {
+            "name": "Proprietary - Commercial Use Only",
+            "url": "https://open-atlas.com/api-license"
+        },
+        "version": "2.0.0"
+    },
+    "paths": {
+        "/login": {
+            "post": {
+                "summary": "Login to receive a JWT",
+                "description": "Authenticates a user using Basic Auth credentials and returns a JWT token if successful.",
+                "operationId": "login",
+                "requestBody": {
+                    "description": "Basic Authorization header with encoded username and password",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "string",
+                                "example": "Authorization: Basic bXJmb3VseTptcnBhc3N3b3Jk"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "User authenticated successfully. JWT token returned in the response.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AuthToken"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request - missing or invalid Authorization header format"
+                    },
+                    "401": {
+                        "description": "Unauthorized - invalid username or password"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                },
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/plots/make_plot": {
+            "post": {
+                "summary": "Create a new plot",
+                "description": "Creates a new plot based on the given geojson and metadata",
+                "operationId": "createPlot",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization header with a Bearer token, formatted as 'Bearer [JWT]' where [JWT] is the JSON Web Token used for user authentication and authorization.",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.your-payload-here.signature"
+                    }
+                ],
+                "requestBody": {
+                    "description": "Details of the plot to create",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PlotInput"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Plot created successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Plot"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input data"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                },
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/plots/plot/{plot_id}": {
+            "get": {
+                "summary": "Retrieve plot details",
+                "description": "Fetches details of a specific plot by its unique plot_id",
+                "operationId": "getPlotNew",
+                "parameters": [
+                    {
+                        "name": "plot_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Plots details retrieved successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Plot"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Plot not found"
+                    },
+                    "403": {
+                        "description": "Forbidden: The user retrieving the plot does not have permission to access it"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                },
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/jobs/make_job": {
+            "post": {
+                "summary": "Create a new job",
+                "description": "Creates a new job based on the given list of plot_ids",
+                "operationId": "createJob",
+                "requestBody": {
+                    "description": "Details of the job to create",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/JobInput"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Job created successfully and plots to be analyzed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Job"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input data"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/jobs/job/{job_id}": {
+            "get": {
+                "summary": "Retrieve job details",
+                "description": "Fetches details of a specific job by its unique job_id",
+                "operationId": "getJobNew",
+                "parameters": [
+                    {
+                        "name": "job_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Job details retrieved successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Job"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Job not found"
+                    },
+                    "403": {
+                        "description": "Forbidden: The user retrieving the job does not have permission to access it"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                },
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/users/check_tokens": {
+            "get": {
+                "summary": "Get token balance info",
+                "description": "Retrieves the total token balance, reserved tokens, and free tokens for the user associated with the provided Bearer token.",
+                "operationId": "checkTokens",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization header with a Bearer token, formatted as 'Bearer [JWT]' where [JWT] is the JSON Web Token used for user authentication and authorization.",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.your-payload-here.signature"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Token balance details retrieved successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string",
+                                    "example": {
+                                        "Token balance": 100,
+                                        "Reserved Tokens": 22,
+                                        "Free Tokens": 78
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "User is not authorized to access this resource. Ensure the Bearer token is valid and the user has the required role."
+                    },
+                    "500": {
+                        "description": "Internal server error. Please try again later."
+                    }
+                },
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "GeoJsonFeature": {
+                "required": [
+                    "geometry",
+                    "type"
+                ],
+                "type": "object",
+                "properties": {
+                    "geometry": {
+                        "$ref": "#/components/schemas/Geometry"
+                    },
+                    "properties": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "description": "Additional properties for the feature as key-value pairs",
+                            "example": "{\"name\":\"Feature1\",\"description\":\"Sample feature\"}"
+                        },
+                        "description": "Additional properties for the feature as key-value pairs",
+                        "example": {
+                            "name": "Feature1",
+                            "description": "Sample feature"
+                        }
+                    },
+                    "type": {
+                        "type": "string",
+                        "description": "Type of the GeoJSON feature",
+                        "example": "Feature"
+                    }
+                },
+                "description": "Represents a GeoJSON feature with geometry and properties"
+            },
+            "Geometry": {
+                "required": [
+                    "type"
+                ],
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    }
+                },
+                "description": "Geometry object defining the spatial aspect of the feature",
+                "discriminator": {
+                    "propertyName": "type"
+                }
+            },
+            "Job": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "description": "Name of the user account that created and owns the job",
+                        "example": "abc_pro"
+                    },
+                    "notes": {
+                        "type": "string",
+                        "description": "Additional notes related to the plot",
+                        "example": "This plot requires frequent irrigation."
+                    },
+                    "job_id": {
+                        "type": "string",
+                        "description": "Unique identifier for the job",
+                        "example": "a31da612-fefe-4da8-800d-0e7120f5617e"
+                    },
+                    "job_name": {
+                        "type": "string",
+                        "description": "Name of the job",
+                        "example": "August shipment 827128"
+                    },
+                    "plot_ids": {
+                        "type": "array",
+                        "description": "A list of IDs of plots to be analyzed in the job",
+                        "example": [
+                            "ef6f5727-307f-4e9d-abcb-74a8b6af0366",
+                            "asd9632d-b589-4e05-9c8b-58fed1f9823a3"
+                        ],
+                        "items": {
+                            "type": "string",
+                            "description": "A list of IDs of plots to be analyzed in the job",
+                            "example": "[\"ef6f5727-307f-4e9d-abcb-74a8b6af0366\",\"asd9632d-b589-4e05-9c8b-58fed1f9823a3\"]"
+                        }
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "description": "Timestamp of job creation",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "description": "Timestamp of job update, for example when the job's analysis is complete",
+                        "format": "date-time"
+                    },
+                    "company_id": {
+                        "type": "string",
+                        "deprecated": true
+                    },
+                    "additional_info": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "description": "Analysis data for the plot, represented as key-value pairs"
+                        },
+                        "description": "Analysis data for the plot, represented as key-value pairs"
+                    },
+                    "token_cost": {
+                        "type": "integer",
+                        "description": "Amount of tokens the job costs based on the plots",
+                        "format": "int32",
+                        "example": 8
+                    },
+                    "harvest_date": {
+                        "type": "string",
+                        "deprecated": true
+                    },
+                    "geohashes": {
+                        "type": "array",
+                        "deprecated": true,
+                        "items": {
+                            "type": "string",
+                            "deprecated": true
+                        }
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "Current status of the job"
+                    },
+                    "plots": {
+                        "type": "array",
+                        "description": "List of plots associated with the job",
+                        "items": {
+                            "$ref": "#/components/schemas/Plot"
+                        }
+                    },
+                    "job_visualization_url": {
+                        "type": "array",
+                        "description": "List of URLs for visualizations of analysis of plots associated with the job",
+                        "example": [
+                            "https://example.com/ef6f5727-307f-4e9d-abcb-74a8b6af0366.png",
+                            "https://example.com/asd9632d-b589-4e05-9c8b-58fed1f9823a3.png"
+                        ],
+                        "items": {
+                            "type": "string",
+                            "description": "List of URLs for visualizations of analysis of plots associated with the job",
+                            "example": "[\"https://example.com/ef6f5727-307f-4e9d-abcb-74a8b6af0366.png\",\"https://example.com/asd9632d-b589-4e05-9c8b-58fed1f9823a3.png\"]"
+                        }
+                    }
+                },
+                "description": "Job object with metadata and plots with analysis if analyzed"
+            },
+            "Plot": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "description": "Username of the account that created the plot, the plot owner",
+                        "example": "jdoe"
+                    },
+                    "country": {
+                        "type": "string",
+                        "description": "Country where the plot is located",
+                        "example": "United States"
+                    },
+                    "state": {
+                        "type": "string",
+                        "description": "State or region where the plot is located",
+                        "example": "California"
+                    },
+                    "geohashes": {
+                        "type": "array",
+                        "deprecated": true,
+                        "items": {
+                            "type": "string",
+                            "deprecated": true
+                        }
+                    },
+                    "notes": {
+                        "type": "string",
+                        "description": "Additional notes related to the plot",
+                        "example": "This plot requires frequent irrigation."
+                    },
+                    "analysis": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "description": "Analysis data for the plot, represented as key-value pairs",
+                            "example": {
+                                "analysisEnd": "2024-08-21",
+                                "risk_level": "Low",
+                                "forest_percentage_2020": 100.0,
+                                "logging_area": 0.0,
+                                "forest_area_2020": 2.516638180705965,
+                                "risk_reason": "Low deforesation, low forest area",
+                                "areaHa": 2.516638180705965,
+                                "protectedAreas": [],
+                                "deforestation": {
+                                    "total_yearly": {
+                                        "2023": 0.21999997241049235
+                                    },
+                                    "total_yearly_jrc": {
+                                        "2023": 0.1299999836971091
+                                    },
+                                    "total": 0.21999997241049235,
+                                    "total_jrc": 0.21999997241049235
+                                },
+                                "deforestation_percentage": 8.741819706032521
+                            }
+                        },
+                        "description": "Analysis data for the plot, represented as key-value pairs",
+                        "example": {
+                            "analysisEnd": "2024-08-21",
+                            "risk_level": "Low",
+                            "forest_percentage_2020": 100.0,
+                            "logging_area": 0.0,
+                            "forest_area_2020": 2.516638180705965,
+                            "risk_reason": "Low deforesation, low forest area",
+                            "areaHa": 2.516638180705965,
+                            "protectedAreas": [],
+                            "deforestation": {
+                                "total_yearly": {
+                                    "2023": 0.21999997241049235
+                                },
+                                "total_yearly_jrc": {
+                                    "2023": 0.1299999836971091
+                                },
+                                "total": 0.21999997241049235,
+                                "total_jrc": 0.21999997241049235
+                            },
+                            "deforestation_percentage": 8.741819706032521
+                        }
+                    },
+                    "plot_id": {
+                        "type": "string",
+                        "description": "Unique identifier for the plot",
+                        "example": "ef6f5727-377f-4e9d-abcb-74a8a6bf0366"
+                    },
+                    "plot_name": {
+                        "type": "string",
+                        "description": "Name of the plot",
+                        "example": "East Field"
+                    },
+                    "geojson_features": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/GeoJsonFeature"
+                        }
+                    },
+                    "harvest_dates": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "description": "List of Harvest dates of the plot",
+                            "format": "date",
+                            "example": "2024-11-01"
+                        }
+                    },
+                    "commodity": {
+                        "type": "string",
+                        "description": "Type of commodity planted in the plot to do analysis on",
+                        "example": "cocoa",
+                        "enum": [
+                            "wood",
+                            "soy",
+                            "cocoa",
+                            "coffee",
+                            "palm_oil",
+                            "beef",
+                            "rubber"
+                        ]
+                    },
+                    "lat": {
+                        "type": "string",
+                        "description": "Latitude of the plot's center",
+                        "example": "34.052235"
+                    },
+                    "lon": {
+                        "type": "string",
+                        "description": "Longitude of the plot's center",
+                        "example": "-118.243683"
+                    },
+                    "area_ha": {
+                        "type": "number",
+                        "description": "Area of the plot in hectares",
+                        "format": "double",
+                        "example": 12.5
+                    },
+                    "tokens_cost": {
+                        "type": "integer",
+                        "description": "Cost of the analyzing the plot in tokens",
+                        "format": "int32",
+                        "example": 150
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "description": "Timestamp of plot creation",
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "description": "Timestamp of the last plot update",
+                        "format": "date-time"
+                    },
+                    "company_id": {
+                        "type": "string",
+                        "deprecated": true
+                    },
+                    "analysis_image": {
+                        "type": "string",
+                        "description": "URL for the visualization of the analysis of the plot",
+                        "example": "https://example.com/images/plot-analysis.jpg"
+                    },
+                    "additional_info": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "description": "Additional information about the plot as key-value pairs",
+                            "example": "{\"soil_quality\":\"high\",\"access\":\"restricted\"}"
+                        },
+                        "description": "Additional information about the plot as key-value pairs",
+                        "example": {
+                            "soil_quality": "high",
+                            "access": "restricted"
+                        }
+                    }
+                },
+                "description": "Plot object with metadata and analysis if a job ran analysis on it"
+            },
+            "Point": {
+                "type": "object",
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/Geometry"
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "coordinates": {
+                                "type": "array",
+                                "description": "An array of 2 coordinates [longitude, latitude]",
+                                "items": {
+                                    "type": "number",
+                                    "description": "An array of 2 coordinates [longitude, latitude]",
+                                    "format": "double"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "Polygon": {
+                "type": "object",
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/Geometry"
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "coordinates": {
+                                "type": "array",
+                                "description": "An array of [longitude, latitude] pairs. For polygons, the first and last coordinates should be the same to close the shape",
+                                "items": {
+                                    "type": "array",
+                                    "description": "An array of [longitude, latitude] pairs. For polygons, the first and last coordinates should be the same to close the shape",
+                                    "items": {
+                                        "type": "array",
+                                        "description": "An array of [longitude, latitude] pairs. For polygons, the first and last coordinates should be the same to close the shape",
+                                        "items": {
+                                            "type": "number",
+                                            "description": "An array of [longitude, latitude] pairs. For polygons, the first and last coordinates should be the same to close the shape",
+                                            "format": "double"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            "JobInput": {
+                "required": [
+                    "plot_ids"
+                ],
+                "type": "object",
+                "properties": {
+                    "job_name": {
+                        "type": "string",
+                        "description": "Name of the job",
+                        "example": "Planting season analysis for Q1"
+                    },
+                    "plot_ids": {
+                        "type": "array",
+                        "description": "List of plot IDs that belong to the user to be analyzed in the job",
+                        "example": [
+                            "ef6f5727-307f-4e9d-abcb-74a8b6af0366",
+                            "asd9632d-b589-4e05-9c8b-58fed1f9823a3"
+                        ],
+                        "items": {
+                            "type": "string",
+                            "description": "List of plot IDs that belong to the user to be analyzed in the job",
+                            "example": "[\"ef6f5727-307f-4e9d-abcb-74a8b6af0366\",\"asd9632d-b589-4e05-9c8b-58fed1f9823a3\"]"
+                        }
+                    },
+                    "notes": {
+                        "type": "string",
+                        "description": "Additional notes about the job",
+                        "example": "Analysis for initial planting"
+                    },
+                    "additional_info": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "description": "Additional information about the job as key-value pairs, where keys and values are both strings",
+                            "example": "{\"soilQuality\":\"High\",\"irrigationType\":\"Drip\"}"
+                        },
+                        "description": "Additional information about the job as key-value pairs, where keys and values are both strings",
+                        "example": {
+                            "soilQuality": "High",
+                            "irrigationType": "Drip"
+                        }
+                    }
+                },
+                "description": "Input data required to create a new job"
+            },
+            "AuthToken": {
+                "type": "object",
+                "properties": {
+                    "token": {
+                        "type": "string",
+                        "description": "JSON Web Token (JWT)",
+                        "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.your-payload-here.signature"
+                    }
+                }
+            },
+            "PlotInput": {
+                "required": [
+                    "commodity",
+                    "geojson",
+                    "harvest_date"
+                ],
+                "type": "object",
+                "properties": {
+                    "geojson": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object",
+                            "description": "GeoJSON representation of the plot's geographical data",
+                            "example": {
+                                "type": "FeatureCollection",
+                                "features": [
+                                    {
+                                        "type": "Feature",
+                                        "geometry": {
+                                            "type": "Polygon",
+                                            "coordinates": [
+                                                [
+                                                    [
+                                                        20.01750003723791,
+                                                        -0.03010959663886581
+                                                    ],
+                                                    [
+                                                        20.01857837976968,
+                                                        -0.029779656058593673
+                                                    ],
+                                                    [
+                                                        20.01958831997618,
+                                                        -0.031143678695514154
+                                                    ],
+                                                    [
+                                                        20.018349030798674,
+                                                        -0.03160640023472183
+                                                    ],
+                                                    [
+                                                        20.017491989905864,
+                                                        -0.03011764397074046
+                                                    ]
+                                                ]
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "description": "GeoJSON representation of the plot's geographical data",
+                        "example": {
+                            "type": "FeatureCollection",
+                            "features": [
+                                {
+                                    "type": "Feature",
+                                    "geometry": {
+                                        "type": "Polygon",
+                                        "coordinates": [
+                                            [
+                                                [
+                                                    20.01750003723791,
+                                                    -0.03010959663886581
+                                                ],
+                                                [
+                                                    20.01857837976968,
+                                                    -0.029779656058593673
+                                                ],
+                                                [
+                                                    20.01958831997618,
+                                                    -0.031143678695514154
+                                                ],
+                                                [
+                                                    20.018349030798674,
+                                                    -0.03160640023472183
+                                                ],
+                                                [
+                                                    20.017491989905864,
+                                                    -0.03011764397074046
+                                                ]
+                                            ]
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "harvest_date": {
+                        "type": "string",
+                        "description": "Harvest date of the plot and end date of analysis",
+                        "format": "date",
+                        "example": "2023-11-01"
+                    },
+                    "commodity": {
+                        "type": "string",
+                        "description": "Type of commodity planted in the plot to do analysis on",
+                        "example": "wood",
+                        "enum": [
+                            "wood",
+                            "soy",
+                            "cocoa",
+                            "coffee",
+                            "palm_oil",
+                            "beef",
+                            "rubber"
+                        ]
+                    },
+                    "plot_name": {
+                        "type": "string",
+                        "description": "Name assigned to the plot",
+                        "example": "My sustainable plot"
+                    },
+                    "notes": {
+                        "type": "string",
+                        "description": "Additional notes related to the plot",
+                        "example": "GeoJSON needs to be revised"
+                    },
+                    "additional_info": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "description": "Additional information as key-value pairs",
+                            "example": "{\"previous_risk_assessment\":\"high\",\"urgency\":\"low\"}"
+                        },
+                        "description": "Additional information as key-value pairs",
+                        "example": {
+                            "previous_risk_assessment": "high",
+                            "urgency": "low"
+                        }
+                    }
+                },
+                "description": "Input model for creating a plot"
+            }
+        }
+    }
+}

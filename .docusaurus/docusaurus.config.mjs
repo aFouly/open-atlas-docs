@@ -4,8 +4,8 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "My Site",
-  "tagline": "Dinosaurs are cool",
+  "title": "Open Atlas Documentation",
+  "tagline": "Satellite monitoring for the new age of traceability",
   "favicon": "img/favicon.ico",
   "url": "https://aFouly.github.io",
   "baseUrl": "/open-atlas-docs/",
@@ -27,8 +27,7 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "./sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "sidebarPath": "./sidebars.js"
         },
         "blog": {
           "showReadingTime": true,
@@ -39,7 +38,6 @@ export default {
             ],
             "xslt": true
           },
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
           "onInlineTags": "warn",
           "onInlineAuthors": "warn",
           "onUntruncatedBlogPosts": "warn"
@@ -53,27 +51,22 @@ export default {
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
-      "title": "My Site",
+      "title": "Open Atlas Documentation",
       "logo": {
-        "alt": "My Site Logo",
-        "src": "img/logo.svg"
+        "alt": "Open Atlas Logo",
+        "src": "img/OA-Logo.png"
       },
       "items": [
         {
           "type": "docSidebar",
           "sidebarId": "tutorialSidebar",
           "position": "left",
-          "label": "Tutorial"
+          "label": "Vantage"
         },
         {
-          "to": "/blog",
-          "label": "Blog",
+          "href": "https://vantage-open-atlas.redocly.app/openapi",
+          "label": "API Reference",
           "position": "left"
-        },
-        {
-          "href": "https://github.com/facebook/docusaurus",
-          "label": "GitHub",
-          "position": "right"
         }
       ],
       "hideOnScroll": false
@@ -111,12 +104,8 @@ export default {
           "title": "More",
           "items": [
             {
-              "label": "Blog",
-              "to": "/blog"
-            },
-            {
-              "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
+              "label": "Api Reference",
+              "href": "https://vantage-open-atlas.redocly.app/openapi"
             }
           ]
         }
